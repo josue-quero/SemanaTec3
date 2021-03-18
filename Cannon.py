@@ -68,8 +68,7 @@ def move():
 
     for target in targets:
         if not inside(target):
-            target.x = 200
-    
+            return
 
     ontimer(move, 50)
 
