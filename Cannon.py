@@ -45,7 +45,6 @@ def draw():
 
 def move():
     "Move ball and targets."
-
     if randrange(40) == 0:
         y = randrange(-150, 150)
         target = vector(200, y)
@@ -54,7 +53,6 @@ def move():
     for target in targets:
         target.x -= 1
 
-    print(speed.y)
     if inside(ball):
         speed.y -= 0.7
         ball.move(speed)
