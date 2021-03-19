@@ -1,12 +1,9 @@
 """Cannon, hitting targets with projectiles.
-
 Exercises
-
 1. Keep score by counting target hits.
 2. Vary the effect of gravity.
 3. Apply gravity to the targets.
 4. Change the speed of the ball.
-
 """
 
 from random import randrange
@@ -49,8 +46,13 @@ def draw():
 
     update()
 
+#Esta función sirve para actualizar el movimiento de los objetivos y de la pelota cada 50 milisegundos
+#Se llama a la función draw para dibujar las nuevas posiciones de los objetivos y la pelota, y se llama 
+#a la función inside para corroborar si la pelota ya fue disparada y si así lo fue, comenzar su decenso
+#por la gravedad y su movimiento hacia el punto al que se disparó.
 def move():
     "Move ball and targets."
+
     if randrange(40) == 0:
         y = randrange(-150, 150)
         target = vector(200, y)
