@@ -17,6 +17,9 @@ ball = vector(-200, -200)
 speed = vector(0, 0)
 targets = []
 
+#Función para detectar un click fuera del área designada para el juego.
+#Responde dando a la bola una velocidad y posición que la hacen invisible
+#al momento de jugar
 def tap(x, y):
     "Respond to screen tap."
     if not inside(ball):
@@ -25,10 +28,13 @@ def tap(x, y):
         speed.x = (x + 400) / 25
         speed.y = (y + 400) / 25
 
+#Función que verifica si un objeto se encuentra dentro de los límites de la pantalla
+#del juego.
 def inside(xy):
     "Return True if xy within screen."
     return -200 < xy.x < 200 and -200 < xy.y < 200
 
+#Función que dibuja los objetivos como puntos azules y las bolas como puntos rojos
 def draw():
     "Draw ball and targets."
     clear()
